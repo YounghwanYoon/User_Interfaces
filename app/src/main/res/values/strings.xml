@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <string name="menu_content_description_1">Home Fragment</string>
+    <string name="menu_content_description_2">Second Fragment</string>
+    <string name="menu_content_description_3">Third Fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

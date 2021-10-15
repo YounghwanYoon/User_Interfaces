@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="HomeFragment"
+        android:id="@+id/homeFragment"
+        android:contentDescription="bottom_menu_item1"
+        android:icon="@drawable/ic_baseline_home_24"
+        app:showAsAction="always"
+    />
+    <item
+        android:title="CalendarFragment"
+        android:id="@+id/calendarFragment"
+        android:contentDescription="bottom_menu_item1"
+        android:icon="@drawable/ic_baseline_calendar_today_24"
+        app:showAsAction="always"
+    />
+
+</menu>

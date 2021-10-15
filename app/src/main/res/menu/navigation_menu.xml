@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/homeFragment"
+        android:contentDescription="@string/menu_content_description_1"
+        android:title="Home Fragment"
+        android:icon="@drawable/ic_baseline_home_24"
+        app:showAsAction="ifRoom"
+        android:visible="true"
+
+        />
+    <item
+        android:id="@+id/secondFragment"
+        android:contentDescription="@string/menu_content_description_1"
+        android:title="Second Fragment"
+        android:icon="@drawable/ic_baseline_search_24"
+        app:showAsAction="ifRoom"
+        android:visible="true"
+        />
+
+    <item
+        android:id="@+id/thirdFragment"
+        android:contentDescription="@string/menu_content_description_1"
+        android:title="Third Fragment"
+        android:icon="@drawable/ic_baseline_settings_24"
+        app:showAsAction="ifRoom"
+        android:visible="true"
+        />
+    <item
+        android:id="@+id/settingFragment"
+        android:contentDescription="@string/menu_content_description_1"
+        android:title="Setting Fragment"
+        android:icon="@drawable/ic_baseline_settings_24"
+        app:showAsAction="always"
+        android:visible="true"
+        />
+
+    <item
+        android:id="@+id/sign_out_or_in"
+        android:contentDescription="sign in or out"
+        android:title="Sign Out"
+        app:showAsAction="collapseActionView"
+        />
+
+</menu>
