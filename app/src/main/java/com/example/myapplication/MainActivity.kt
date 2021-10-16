@@ -7,10 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.onNavDestinationSelected
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
+import androidx.navigation.ui.*
 import com.example.myapplication.databinding.ActivityMainBinding
 
 
@@ -37,17 +34,25 @@ class MainActivity : AppCompatActivity() {
         navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
 
-
-        //This remove/disable back button of appbar for bottom navigation
+        //This remove/disable back/up button of appbar for bottom navigation
         appBarConfig = AppBarConfiguration(
-            setOf(R.id.homeFragment, R.id.calendarFragment)
+            setOf(R.id.homeFragment, R.id.calendarFragment),
+
+            //To display hamburger icon on toolbar
+            _binding.drawerLayout
         )
+
+        //replacing ActionBar title with toolbar.
+        setSupportActionBar(_binding.toolbar)
 
         //connecting between toolbar/action bar and navcontroller but needs to do with onSupportNavigateUp()
         setupActionBarWithNavController(navController, appBarConfig)
 
         //connecting between bottom menu/toolbar and navcontroller
         _binding.bottomNav.setupWithNavController(navController)
+
+        //Register drawer menu with nav_controller
+        _binding.drawerNavView.setupWithNavController(navController)
     }
 
     //This allowing menu to register with activity appbar/toolbar and this will be shared by all fragments under this activity
@@ -90,6 +95,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        return navController.navigateUp() || super.onSupportNavigateUp()
+        return navController.navigateUp(appBarConfig) || super.onSupportNavigateUp()
     }
 }
