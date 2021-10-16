@@ -65,4 +65,9 @@
         android:id="@+id/calendarFragment"
         android:name="com.example.myapplication.ui.CalendarFragment"
         android:label="fragment_calendar" />
+    <fragment
+        android:id="@+id/addPageFragment"
+        android:name="com.example.myapplication.AddPageFragment"
+        android:label="fragment_add_page"
+        tools:layout="@layout/fragment_add_page" />
 </navigation>

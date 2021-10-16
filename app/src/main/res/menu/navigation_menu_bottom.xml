@@ -12,8 +12,16 @@
     <item
         android:title="CalendarFragment"
         android:id="@+id/calendarFragment"
-        android:contentDescription="bottom_menu_item1"
+        android:contentDescription="bottom_menu_item2"
         android:icon="@drawable/ic_baseline_calendar_today_24"
+        app:showAsAction="always"
+    />
+
+    <item
+        android:title="AddFragment"
+        android:id="@+id/addPageFragment"
+        android:contentDescription="bottom_menu_item3"
+        android:icon="@drawable/ic_baseline_add_circle_outline_24"
         app:showAsAction="always"
     />
 
