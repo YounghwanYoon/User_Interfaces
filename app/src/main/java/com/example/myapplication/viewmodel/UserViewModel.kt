@@ -36,4 +36,14 @@ class UserViewModel(application: Application):AndroidViewModel(application) {
         }
     }
 
+    fun getUser():LiveData<List<UserEntity>>{
+        return readAllData
+    }
+
+    fun removeAllUser(){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.removeAllUser()
+        }
+    }
+
 }

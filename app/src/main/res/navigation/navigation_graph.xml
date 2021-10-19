@@ -68,5 +68,17 @@
     <fragment
         android:id="@+id/addPageFragment"
         android:name="com.example.myapplication.ui.AddPageFragment"
-        android:label="fragment_add_page" />
+        android:label="fragment_add_page" >
+        <action
+            android:id="@+id/action_addPageFragment_to_listUserFragment"
+            app:destination="@id/listUserFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/listUserFragment"
+        android:name="com.example.myapplication.ui.ListUserFragment"
+        android:label="fragment_list_user" />
 </navigation>

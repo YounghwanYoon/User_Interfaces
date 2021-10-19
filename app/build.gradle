@@ -76,6 +76,9 @@ dependencies {
     // optional - Test helpers
     testImplementation("androidx.room:room-testing:$roomVersion")
 
+    //For viewmodel in fragment lazy instantiation
+    implementation ("androidx.fragment:fragment-ktx:1.3.6")
+
 
 
 }

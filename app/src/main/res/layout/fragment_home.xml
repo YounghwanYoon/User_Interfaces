@@ -22,14 +22,4 @@
         android:textColor="@color/black"
         android:textSize="50sp" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/home_text"
-        android:layout_marginTop="25dp"
-        android:layout_centerHorizontal="true"
-        android:hint="UserName:"
-        android:text=""
-        android:textSize="35dp" />
-
 </RelativeLayout>

@@ -1,10 +1,7 @@
 package com.example.myapplication.room.dao
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.example.myapplication.room.data.UserEntity
 
 @Dao
@@ -15,5 +12,10 @@ interface UserDao {
 
     @Query("SELECT * FROM example_table ORDER BY id ASC")
     fun readAllData(): LiveData<List<UserEntity>>
+
+
+    //It will remove all rows from table
+    @Query("DELETE FROM example_table")
+    suspend fun removeAllUser()
 
 }

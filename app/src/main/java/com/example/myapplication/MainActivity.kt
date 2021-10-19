@@ -5,10 +5,13 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import androidx.activity.viewModels
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.*
 import com.example.myapplication.databinding.ActivityMainBinding
+import com.example.myapplication.viewmodel.UserViewModel
 
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +23,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navHostFragment:NavHostFragment
     private lateinit var navController:NavController
     private lateinit var appBarConfig:AppBarConfiguration
+
+    //private val userViewModel: UserViewModel by viewModels()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
