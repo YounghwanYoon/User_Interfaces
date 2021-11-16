@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml  version="1.0" encoding="utf-8"?>
 <navigation
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,7 +9,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.myapplication.ui.HomeFragment"
+        android:name="com.example.myapplication.ui.main_fragments.HomeFragment"
         android:label="Home Fragment"
         tools:layout="@layout/fragment_home"
         >
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
-        android:name="com.example.myapplication.ui.SecondFragment"
+        android:name="com.example.myapplication.ui.main_fragments.SecondFragment"
         android:label="Second Fragment"
         tools:layout="@layout/fragment_second"
         >
@@ -42,7 +42,7 @@
     </fragment>
     <fragment
         android:id="@+id/thirdFragment"
-        android:name="com.example.myapplication.ui.ThirdFragment"
+        android:name="com.example.myapplication.ui.main_fragments.ThirdFragment"
         android:label="Third Fragment"
         tools:layout="@layout/fragment_third"
         >
@@ -67,7 +67,7 @@
         android:label="fragment_calendar" />
     <fragment
         android:id="@+id/addPageFragment"
-        android:name="com.example.myapplication.ui.AddPageFragment"
+        android:name="com.example.myapplication.ui.note_relate.AddPageFragment"
         android:label="fragment_add_page" >
         <action
             android:id="@+id/action_addPageFragment_to_listUserFragment"
@@ -79,6 +79,19 @@
     </fragment>
     <fragment
         android:id="@+id/listUserFragment"
-        android:name="com.example.myapplication.ui.ListUserFragment"
-        android:label="fragment_list_user" />
+        android:name="com.example.myapplication.ui.note_relate.ListUserFragment"
+        android:label="fragment_list_user" >
+        <action
+            android:id="@+id/action_listUserFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.myapplication.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" >
+        <action
+            android:id="@+id/action_editFragment_to_listUserFragment"
+            app:destination="@id/listUserFragment" />
+    </fragment>
 </navigation>

@@ -5,7 +5,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/cream_white"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="16dp"
+    android:id="@+id/each_card_view"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,10 +20,10 @@
         >
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/Greeting_txt_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Greedting...."
+            android:text="Greetings...."
             android:textStyle="italic"
             android:textSize="30sp"
             android:textColor="@color/teal_700"
@@ -37,12 +41,35 @@
             android:layout_marginEnd="108dp"
             android:hint="New User"
             android:textSize="30sp"
-            android:textColor="@color/teal_700"
+            android:textColor="@color/teal_200"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.618"
-            app:layout_constraintStart_toEndOf="@+id/textView2"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toEndOf="@+id/Greeting_txt_view"
+            app:layout_constraintTop_toBottomOf="@+id/Greeting_txt_view"
             app:layout_constraintVertical_bias="0.025" />
+<!--
+        <ImageButton
+            android:id="@+id/delete_image_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_baseline_delete_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.035" />
+
+        <ImageButton
+            android:id="@+id/edit_image_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_baseline_edit_24"
+            app:layout_constraintBottom_toBottomOf="@+id/delete_image_btn"
+            app:layout_constraintEnd_toStartOf="@+id/delete_image_btn"
+            app:layout_constraintHorizontal_bias="0.942"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/delete_image_btn"
+            app:layout_constraintVertical_bias="0.037" />
+-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

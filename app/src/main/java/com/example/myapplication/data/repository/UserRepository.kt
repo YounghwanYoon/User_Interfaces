@@ -1,8 +1,8 @@
-package com.example.myapplication.repository
+package com.example.myapplication.data.repository
 
 import androidx.lifecycle.LiveData
-import com.example.myapplication.room.dao.UserDao
-import com.example.myapplication.room.data.UserEntity
+import com.example.myapplication.data.repository.room.dao.UserDao
+import com.example.myapplication.data.repository.room.data.UserEntity
 
 
 //Repository is a class access to multiple data sources and communicate/access to handle a data between database and view-model.
@@ -22,4 +22,7 @@ class UserRepository (private val userDao: UserDao){
         userDao.removeAllUser()
     }
 
+    suspend fun editUserGreeting(user_id:Int, user_name:String, user_greeting:String ){
+        userDao.editUserGreeting(user_id, user_name, user_greeting)
+    }
 }

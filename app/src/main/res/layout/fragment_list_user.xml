@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_bright"
+    android:background="@android:color/darker_gray"
     android:id="@+id/user_recycler_view_holder_layout"
-    tools:context=".ui.ListUserFragment">
+    tools:context=".ui.note_relate.ListUserFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/user_recycler_view"

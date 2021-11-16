@@ -1,4 +1,4 @@
-package com.example.myapplication.ui
+package com.example.myapplication.ui.main_fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import com.example.myapplication.R
-import com.example.myapplication.databinding.FragmentSecondBinding
 import com.example.myapplication.databinding.FragmentThirdBinding
 
 class ThirdFragment: Fragment(R.layout.fragment_third) {

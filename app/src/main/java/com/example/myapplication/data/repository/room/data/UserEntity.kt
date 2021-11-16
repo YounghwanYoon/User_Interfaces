@@ -1,4 +1,4 @@
-package com.example.myapplication.room.data
+package com.example.myapplication.data.repository.room.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -7,7 +7,8 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "example_table")
 data class UserEntity(
     @PrimaryKey(autoGenerate = true)
-    val id:Int,
+    //@ColumnInfo(name = "id")
+    val user_id:Int,
     val name:String,
     val greeting:String,
 ){

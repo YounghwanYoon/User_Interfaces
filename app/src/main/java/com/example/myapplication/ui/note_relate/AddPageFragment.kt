@@ -1,4 +1,4 @@
-package com.example.myapplication.ui
+package com.example.myapplication.ui.note_relate
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,14 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.NavDirections
-import androidx.navigation.NavHost
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
-import com.example.myapplication.MainActivity
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentAddPageBinding
-import com.example.myapplication.room.data.UserEntity
+import com.example.myapplication.data.repository.room.data.UserEntity
 import com.example.myapplication.viewmodel.UserViewModel
 
 class AddPageFragment : Fragment(R.layout.fragment_add_page) {
@@ -44,7 +40,7 @@ class AddPageFragment : Fragment(R.layout.fragment_add_page) {
 
     private fun addUser(userName:String){
         inputValidation()
-        val newUserEntity = UserEntity(0,userName,"hello")
+        val newUserEntity = UserEntity(0,userName,"Greeting")
         userViewModel.addUser(newUserEntity)
     }
 
